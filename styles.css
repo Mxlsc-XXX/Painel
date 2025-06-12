@@ -1,0 +1,234 @@
+  /* Base reset and container */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Fira Mono', monospace;
+    background: linear-gradient(135deg, #000000 0%, #2a0000 100%);
+    min-height: 100vh;
+    color: #eee;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    animation: slideInDown 0.8s ease-out;
+  }
+
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff4444;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    user-select: none;
+  }
+
+  header p {
+    color: #ff8888;
+    font-weight: 500;
+    margin-top: 0.25rem;
+    user-select: none;
+  }
+
+  /* Categories filter */
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .category-btn {
+    background: #220000;
+    border: 1.5px solid #aa0000;
+    color: #ff4444;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .category-btn:hover,
+  .category-btn.active {
+    background: #ff0000;
+    border-color: #ff2222;
+    color: #fff;
+    box-shadow: 0 0 8px #ff2222;
+  }
+
+  /* Cards container */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 1.5rem;
+  }
+
+  /* Card style */
+  .card {
+    background: rgba(20, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem 2rem;
+    box-shadow: 0 20px 40px rgba(255, 0, 0, 0.4);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+  }
+
+  .card:hover {
+    box-shadow: 0 30px 60px rgba(255, 0, 0, 0.7);
+    transform: translateY(-4px);
+  }
+
+  .card h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ff4444;
+    margin-bottom: 0.75rem;
+    user-select: text;
+  }
+
+  .card p {
+    flex-grow: 1;
+    color: #ff9999;
+    margin-bottom: 1.25rem;
+    user-select: text;
+    line-height: 1.4;
+  }
+
+  .btn-link {
+    align-self: flex-start;
+    background: transparent;
+    border: 2px solid #ff4444;
+    color: #ff4444;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    user-select: none;
+  }
+
+  .btn-link:hover,
+  .btn-link:focus {
+    background: #ff0000;
+    border-color: #ff0000;
+    color: #fff;
+    box-shadow: 0 0 10px #ff2222;
+    outline: none;
+  }
+
+  .btn-link i {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    background: #110000;
+    border-top: 1px solid #440000;
+    padding: 1rem 0;
+    text-align: center;
+    color: #ff4444;
+    font-family: 'Fira Mono', monospace;
+    user-select: none;
+  }
+
+  footer .social-links {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  footer .social-links a {
+    color: #ff4444;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  footer .social-links a:hover,
+  footer .social-links a:focus {
+    color: #ff0000;
+    outline: none;
+  }
+
+  /* Scrollbar for cards container */
+  .cards::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .cards::-webkit-scrollbar-track {
+    background: #220000;
+  }
+
+  .cards::-webkit-scrollbar-thumb {
+    background: #ff4444;
+    border-radius: 4px;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 640px) {
+    header h1 {
+      font-size: 2.25rem;
+    }
+    .card {
+      font-size: 0.9rem;
+      padding: 1.25rem 1rem 1.5rem;
+    }
+    .btn-link {
+      font-size: 0.85rem;
+      padding: 0.4rem 1rem;
+    }
+  }

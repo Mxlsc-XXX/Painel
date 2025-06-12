@@ -1,0 +1,69 @@
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Painel de Automações Linux Style</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main role="main" aria-label="Painel de automações estilo Linux">
+    <header role="banner">
+      <h1>Painel de Automações Web</h1>
+      <p>Para automatizar tarefas repetitivas na web</p>
+    </header>
+
+    <nav aria-label="Categorias de automações" class="categories" role="navigation">
+      <button class="category-btn active" data-category="all" aria-pressed="true" type="button">Todas</button>
+      <button class="category-btn" data-category="pdf" aria-pressed="false" type="button">PDF</button>
+      <button class="category-btn" data-category="formulario" aria-pressed="false" type="button">Formulários</button>
+      <button class="category-btn" data-category="dados" aria-pressed="false" type="button">Extração de Dados</button>
+      <button class="category-btn" data-category="upload" aria-pressed="false" type="button">Upload</button>
+      <button class="category-btn" data-category="login" aria-pressed="false" type="button">Login</button>
+      <button class="category-btn" data-category="monitoramento" aria-pressed="false" type="button">Monitoramento</button>
+      <button class="category-btn" data-category="publicacao" aria-pressed="false" type="button">Publicação</button>
+      <button class="category-btn" data-category="mensagens" aria-pressed="false" type="button">Mensagens</button>
+      <button class="category-btn" data-category="outros" aria-pressed="false" type="button">Outros</button>
+    </nav>
+
+    <section class="cards" aria-live="polite" aria-label="Lista de automações">
+
+        <article class="card" data-category="pdf" tabindex="0" aria-labelledby="title1" aria-describedby="desc1">
+        <h2 id="title1">Resumidor de PDF</h2>
+        <p id="desc1">Resuma documentos PDF longos em textos curtos e objetivos, facilitando a leitura e análise rápida.</p>
+        <a href="https://mxlsc-xxx.github.io/ResumidorDePdf/" target="_blank" rel="noopener noreferrer" class="btn-link" aria-label="Abrir site Resumidor de PDF">
+            Abrir site <i class="fas fa-external-link-alt"></i>
+        </a>
+        </article>
+
+        <article class="card" data-category="monitoramento" tabindex="0" aria-labelledby="title2" aria-describedby="desc2">
+        <h2 id="title2">Temporizador</h2>
+        <p id="desc2">Um temporizador simples para ajudar a gerenciar seu tempo de forma eficaz.</p>
+        <a href="https://mxlsc-xxx.github.io/Temporizador/" target="_blank" rel="noopener noreferrer" class="btn-link" aria-label="Abrir site Temporizador">
+            Abrir site <i class="fas fa-external-link-alt"></i>
+        </a>
+        </article>
+
+    </section>
+  </main>
+
+  <footer role="contentinfo" aria-label="Rodapé com links sociais">
+    <div>© 2025 Painel de Automações Mxlsc</div>
+    <div class="social-links" role="navigation" aria-label="Links para redes sociais">
+      <a href="https://github.com/Mxlsc-XXX" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="https://discordapp.com/users/586608984560238595" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+        <i class="fab fa-discord" aria-hidden="true"></i>
+      </a>
+      <a href="https://wa.me/+5513974140538" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
